@@ -6,7 +6,7 @@ function fixNumber(n: number) {
   return n < 10 ? '0' + n : '' + n
 }
 
-async function requestWakeLock(fn) {
+async function requestWakeLock(fn: () => void) {
   try {
     const wakeLock = await navigator.wakeLock.request('screen');
     console.log('屏幕已禁止熄屏');
@@ -25,6 +25,7 @@ export default function Clock() {
       setWakeLock(true)
     })
   }, [wakeLock])
+  
   React.useEffect(() => {
     setTimeout(() => {
       setDate(new Date())
