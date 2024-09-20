@@ -19,11 +19,10 @@ export default function Item({ content }: IClockItem) {
   const b = content.substring(1)
   return (
     <div
-      style={{ width: '400px', height: '400px', fontSize: '300px' }}
+      style={{ width: '25vw', height: '25vw', fontSize: '20vw' }}
       className="bg-gray-500 flex text-center items-center rounded-2xl text-white relative"
     >
       <div className="absolute top-1/2 left-0 h-1 w-full bg-black"></div>
-      {/* <div className="absolute top-0 left-1/2 w-1 h-full bg-black"></div> */}
       <div className="grow">{a}</div>
       <div className="grow">{b}</div>
     </div>
